@@ -20,5 +20,10 @@ public class ProductController {
         return productList;
     }
 
+    @PostMapping
+    public Product addProduct(@RequestParam Product newProduct){
+        productList.add(newProduct);
+        return newProduct;
+    }
 }
 
